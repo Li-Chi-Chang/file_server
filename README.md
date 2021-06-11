@@ -36,6 +36,13 @@ ref page [here](https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Djang
 
     add this secrets.py into gitignore
 
+    Or, use generator to get key
+
+    ```py
+    from django.core.management.utils import get_random_secret_key
+    newkey = get_random_secret_key()
+    ```
+
 4. add an app
    
    ```cmd
