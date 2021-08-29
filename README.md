@@ -9,9 +9,11 @@ LiChi
 ref page [here](https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Django/development_environment)
 
 1. start project
+
     ```cmd
     django-admin startproject file_server
     ```
+
 2. check default setting
 
     ```cmd
@@ -36,19 +38,12 @@ ref page [here](https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Djang
 
     add this secrets.py into gitignore
 
-    Or, use generator to get key
-
-    ```py
-    from django.core.management.utils import get_random_secret_key
-    newkey = get_random_secret_key()
-    ```
-
 4. add an app
-   
+
    ```cmd
-   python3 manage.py startapp dirtravel
+   python manage.py startapp dirtravel
    ```
-   
+
    in file_server\settings.py:
 
    ```py
@@ -73,6 +68,7 @@ ref page [here](https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Djang
     ```
 
     create dirtravel/urls.py file
+
     ```py
     from django.urls import path
     from . import views
@@ -93,7 +89,7 @@ ref page [here](https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Djang
 7. now, it is done for all setting. you can try the command below. There is an error(page not found) is very normal(we didn't create page for it)
 
    ```cmd
-   python3 manage.py runserver
+   python manage.py runserver
    ```
 
 ## TODO
